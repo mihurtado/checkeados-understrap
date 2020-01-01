@@ -1,7 +1,7 @@
 {
-  "name": "understrap",
+  "name": "checkeados-understrap",
   "version": "0.9.4",
-  "description": "WordPress Theme framework",
+  "description": "Checkeados WordPress Theme",
   "main": "index.js",
   "scripts": {
     "postinstall": "gulp copy-assets"
@@ -20,7 +20,7 @@
     "bootstrap",
     "underscores"
   ],
-  "author": "Holger Koenemann",
+  "author": "Matías Hurtado - Holger Koenemann",
   "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/holger1411/understrap/issues"
