@@ -2,9 +2,12 @@
 	<?php
 		$image = get_the_post_thumbnail( $vehicle->get_id(), apply_filters( 'wpcm_single_vehicle_large_thumbnail_size', 'wpcm_vehicle_single' ) );
 	?>
-    <a href="<?php echo $url; ?>" title="<?php echo $title; ?>">
-        <div class="wpcm-listings-item-image-wrapper">
+	<?php do_action( 'wpcm_vehicle_listings_item_start', $vehicle ); ?>
+	<a href="<?php echo $url; ?>" title="<?php echo $title; ?>">
+		<div class="wpcm-listings-item-image-wrapper">
+			<?php do_action( 'wpcm_vehicle_listings_item_image_start', $vehicle ); ?>
 			<?php echo $image; ?>
+			<?php do_action( 'wpcm_vehicle_listings_item_image_end', $vehicle ); ?>
 		</div>
 		<div class="wpcm-listings-item-text">
 			<div class="row">
@@ -16,16 +19,22 @@
 				</div>
 			</div>
 			<div class="row">
-				<p class="description"><?php echo $title; ?></p>
+				<p class="description">
+					<?php do_action( 'wpcm_vehicle_listings_item_description_start', $vehicle ); ?>
+					<?php echo $title; ?></p>
+					<?php do_action( 'wpcm_vehicle_listings_item_description_end', $vehicle ); ?>
 			</div>
 			<div class="row">
+				<?php do_action( 'wpcm_vehicle_listings_item_meta_start', $vehicle ); ?>
 				<div class="col-6">
 					<p class="year"><?php echo explode("-", $vehicle->get_formatted_frdate())[1]; ?></p>
 				</div>
 				<div class="col-6">
 					<p class="mileage"><?php echo $mileage; ?></p>
 				</div>
+				<?php do_action( 'wpcm_vehicle_listings_item_meta_end', $vehicle ); ?>
 			</div>
 		</div>
-    </a>
+		<?php do_action( 'wpcm_vehicle_listings_item_end', $vehicle ); ?>
+  </a>
 </li>
