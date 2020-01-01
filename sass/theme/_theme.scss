@@ -271,6 +271,10 @@ article {
   transform: rotate(-45deg);
 }
 
+#similar-cars .wpcm-listings-item-image-wrapper .wp-post-image {
+	display: inline !important;
+}
+
 // que quieres hacer
 .wpb-js-composer .vc_tta-color-blue.vc_tta-style-classic {
 	.vc_tta-tab {

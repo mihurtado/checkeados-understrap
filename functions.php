@@ -29,3 +29,12 @@ $understrap_includes = array(
 foreach ( $understrap_includes as $file ) {
 	require_once get_template_directory() . '/inc' . $file;
 }
+
+function add_similar_cars($vehicle) {
+	$shortcode = '[wpcm_cars show_filters="false" show_sort="false" sort="date-desc" per_page="3" make="' . $vehicle->get_make_name() . '"]';
+	echo '<div class="wpcm-content-block" id="similar-cars">';
+	echo '<h2>Otros similares que podría interesarte</h2>';
+	echo do_shortcode($shortcode);
+	echo '</div>';
+}
+add_filter( 'wpcm_after_single_vehicle', 'add_similar_cars' );

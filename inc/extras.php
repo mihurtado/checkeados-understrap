@@ -92,6 +92,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 		if ( ! $next && ! $previous ) {
 			return;
 		}
+		/* Disabled by MH
 		?>
 		<nav class="container navigation post-navigation">
 			<h2 class="sr-only"><?php esc_html_e( 'Post navigation', 'understrap' ); ?></h2>
@@ -107,6 +108,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 			</div><!-- .nav-links -->
 		</nav><!-- .navigation -->
 		<?php
+		*/
 	}
 }
 
