@@ -261,7 +261,8 @@ article {
 	}
 }
 
-.wpcm_vehicle .wpcm-images .wpcm-pending-review, .wpcm_vehicle .wpcm-images .wpcm-sold {
+.wpcm_vehicle .wpcm-images .wpcm-pending-review, .wpcm_vehicle .wpcm-images .wpcm-sold,
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper .wpcm-pending-review, .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper .wpcm-sold {
 	background: $primary-green;
 	font-weight: 400;
 	top: 1.4em;
