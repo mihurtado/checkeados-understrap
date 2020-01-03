@@ -31,7 +31,7 @@ foreach ( $understrap_includes as $file ) {
 }
 
 function add_similar_cars($vehicle) {
-	$shortcode = '[wpcm_cars show_filters="false" show_sort="false" sort="date-desc" per_page="3" make="' . $vehicle->get_make_name() . '"]';
+	$shortcode = '[wpcm_cars show_filters="false" show_sort="false" sort="date-desc" per_page="3" exclude_id="' . $vehicle->get_id() . '" make="' . $vehicle->get_make_name() . '"]';
 	echo '<div class="wpcm-content-block" id="similar-cars">';
 	echo '<h2>Otros similares que podría interesarte</h2>';
 	echo do_shortcode($shortcode);
