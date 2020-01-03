@@ -448,3 +448,25 @@ $modal-height: 500px;
 		}
 	}
 }
+
+// Informe
+.informe-icons {
+	.evc-st-title {
+		text-transform: uppercase;
+		font-weight: 500 !important;
+		font-size: 13px !important;
+	}
+}
+
+// Blog
+.btn.btn-secondary.understrap-read-more-link {
+	display: none;
+}
+
+.vc_btn3.vc_btn3-color-juicy-pink, .vc_btn3.vc_btn3-color-juicy-pink.vc_btn3-style-flat {
+	background-color: $primary-green !important;
+
+	&:hover {
+		background-color: $primary-green-darker !important;
+	}
+}
