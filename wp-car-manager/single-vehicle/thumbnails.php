@@ -6,47 +6,58 @@ if ( ! defined( 'ABSPATH' ) ) {
 // get attachment ID's
 $attachment_ids = $vehicle->get_gallery_attachment_ids();
 
+?>
+<?php
+
 if ( $attachment_ids ) {
-	$loop    = 0;
-	$columns = apply_filters( 'wpcm_vehicle_thumbnails_columns', 4 );
-	?>
-	<div class="wpcm-thumbnails wpcm-<?php echo 'columns-' . $columns; ?>"><?php
+  $groups = array_chunk($attachment_ids, 4);
+  $loop = 0;
+  ?>
+  <div id="carGallery" class="carousel slide mt-3" data-ride="carousel">
+    <div class="carousel-inner">
 
-		foreach ( $attachment_ids as $attachment_id ) {
+    <?php
+		foreach ( $groups as $group ) {
+    ?>
+      <div class="carousel-item <?php if ($loop == 0) echo 'active'; ?>">
+        <div class="row justify-content-start">
+          <?php
+          foreach ( $group as $attachment_id) {
+            // get image link
+            $image_link = wp_get_attachment_url( $attachment_id );
 
-			// get image link
-			$image_link = wp_get_attachment_url( $attachment_id );
+            // get image caption
+            $image_caption = esc_attr( get_post_field( 'post_excerpt', $attachment_id ) );
 
-			// no link, no image
-			if ( ! $image_link ) {
-				continue;
-			}
+            // get image html
+            $image_src = wp_get_attachment_image_src( $attachment_id, 'thumbnail' )[0];
+            $image_src_full = wp_get_attachment_image_src( $attachment_id, 'large' )[0];
 
-			// build link classes
-			$classes = array( 'zoom' );
-
-			if ( $loop == 0 || $loop % $columns == 0 ) {
-				$classes[] = 'first';
-			}
-
-			if ( ( $loop + 1 ) % $columns == 0 ) {
-				$classes[] = 'last';
-			}
-
-			$image_class = esc_attr( implode( ' ', $classes ) );
-
-			// get image caption
-			$image_caption = esc_attr( get_post_field( 'post_excerpt', $attachment_id ) );
-
-			// get image html
-			$image = Never5\WPCarManager\Helper\Images::get_image_html( $attachment_id, apply_filters( 'wpcm_single_vehicle_small_thumbnail_size', 'wpcm_vehicle_thumbnail' ) );
-
-			// Output image with overlay link
-			echo apply_filters( 'wpcm_single_vehicle_image_thumbnail_html', sprintf( '<a href="%s" class="%s" title="%s" data-rel="prettyPhoto[vehicle-gallery]">%s</a>', $image_link, $image_class, $image_caption, $image ), $attachment_id, $vehicle->get_id(), $image_class );
-
-			$loop ++;
-		}
-
-		?></div>
-	<?php
+          ?>
+          <div class="col-3">
+						<a href="<?php echo $image_src_full; ?>" class="zoom" title="<?php echo $image_caption; ?>" data-rel="prettyPhoto[vehicle-gallery]">
+            	<img class="img-fluid" src="<?php echo $image_src ?>" alt="<?php echo $image_caption ?>">
+						</a>
+          </div>
+          <?php
+          }
+          ?>
+        </div>
+      </div>
+    <?php
+    $loop++;
+    }
+    ?>
+    </div>
+    <a class="carousel-control-prev" href="#carGallery" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carGallery" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+<?php
 }
+?>
