@@ -41,6 +41,10 @@ do_action( 'wpcm_before_single_vehicle', $vehicle );
 			?>
 		</div>
 
+		<div class="wpcm-vehicle-video">
+			<?php require 'single-vehicle/video.php'; ?>
+		</div>
+
 		<div class="wpcm-vehicle-content entry-content">
 			<?php
 			/**
