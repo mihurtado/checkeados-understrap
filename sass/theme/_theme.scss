@@ -6,9 +6,21 @@
 
 .vc_btn3.vc_btn3-color-green.vc_btn3-style-modern {
 	background-color: $primary-green !important;
+	background-image: none !important;
 
 	&:hover {
 		background-color: $primary-green-darker !important;
+	}
+}
+
+.vc_row {
+	margin: 0 auto !important;
+}
+
+@media screen and (max-width: 767px) {
+	.adjust-mobile-img-borders {
+		margin-top: -40px !important;
+		margin-bottom: -15px !important;
 	}
 }
 
@@ -46,9 +58,68 @@ nav.navbar {
 			display: none;
 		}
 	}
+
+	@media screen and (max-width: 500px) {
+		.navbar-brand {
+			margin-left: -5px;
+
+			img {
+				margin-left: 0;
+			}
+		}
+
+		.navbar-toggler {
+			margin-right: 20px;
+			margin-top: 15px;
+		}
+	}
 }
 
-body.home nav.navbar {
+.navbar-dark {
+	.navbar-toggler {
+		border-color: $primary-green;
+		color: $primary-green;
+	}
+
+	.navbar-toggler-icon {
+		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(57, 181, 74, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	}
+}
+
+.form-group, .wpcf7 .wpcf7-form {
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.modal-link-hide-mobile {
+	display: block !important;
+
+	@media screen and (max-width: 768px) {
+		display: none !important;
+	}
+}
+
+.anti-modal-link {
+	display: none !important;
+
+	@media screen and (max-width: 768px) {
+		display: block !important;
+	}
+}
+
+.btn-outline-primary, .wpcf7 input[type=submit] {
+	background-color: $primary-green;
+	color: #fff;
+	border: 0;
+	margin-bottom: 0;
+
+	&:hover {
+		background-color: $primary-green-darker;
+	}
+}
+
+nav.navbar {
 	background-color: transparent !important;
 
 	a {
@@ -70,6 +141,30 @@ body.home nav.navbar {
 
 		&.logo-negro {
 			display: none;
+		}
+	}
+
+	@media screen and (max-width: 991px) {
+		background-color: #fff !important;
+		opacity: .8;
+
+		a {
+			color: $primary-green !important;
+			font-weight: 600;
+
+			&:hover {
+				color: $primary-green-darker !important;
+			}
+		}
+
+		.navbar-brand img {
+			&.logo-negro {
+				display: inline;
+			}
+
+			&.logo-blanco {
+				display: none;
+			}
 		}
 	}
 
@@ -102,11 +197,15 @@ body.admin-bar nav.navbar {
 	top: 32px;
 }
 
+.rev_slider .tp-caption, .rev_slider .caption {
+	white-space: normal !important;
+}
+
 div.full-title-with-background {
 	margin-top: 100px;
 	background-size: cover;
 	background-position: center;
-	padding-top: 50px;
+	padding-top: 90px;
 	padding-bottom: 80px;
 
 	.evc-section-title {
@@ -119,11 +218,36 @@ div.full-title-with-background {
 		text-transform: uppercase;
 		text-shadow: 2px 2px 4px rgba(0,0,0,.5);
 	}
+
+	.evc-st-text {
+		color: #fff !important;
+		font-weight: 500 !important;
+		text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+		font-size: larger;
+	}
+
+	.evc-button {
+		background-color: $primary-green;
+		color: #fff;
+		border-radius: 10px;
+
+		&:hover {
+			background-color: $primary-green-darker;
+			text-decoration: none;
+		}
+	}
+}
+
+#wrapper-footer {
+	background-color: $footer-bg;
+	color: $primary-green;
+	padding-bottom: 15px;
 }
 
 #wrapper-footer-full {
-	background-color: #191919;
-	padding: 30px 0;
+	background-color: $footer-bg;
+	padding-top: 30px;
+	padding-bottom: 0;
 	color: #aaaaaa;
 
 	a {
@@ -137,7 +261,16 @@ div.full-title-with-background {
 	}
 
 	.footer-widget {
-		padding: 20px 0;
+		padding: 20px 10px;
+
+		@media screen and (max-width: 767px) {
+			text-align: center;
+
+			ul {
+				list-style-type: none;
+    		padding: 0;
+			}
+		}
 	}
 }
 
@@ -157,6 +290,10 @@ div.full-title-with-background {
 		margin: 30px 0 !important;
 		font-weight: 500;
 		font-size: 1.4rem;
+
+		@media screen and (max-width: 767px) {
+			margin: 10px 0 !important;
+		}
 	}
 
 	.vc_icon_element-inner {
@@ -165,8 +302,49 @@ div.full-title-with-background {
 	}
 }
 
+.wpb-js-composer {
+	.vc_tta.vc_tta-tabs {
+		.vc_tta-panel-heading {
+			display: none !important;
+		}
+
+		.vc_tta-tabs-container {
+			display: block !important;
+		}
+	}
+
+	.vc_tta.vc_general .vc_tta-tab > a {
+		padding: 10px !important;
+	}
+
+	.vc_tta-color-blue.vc_tta-style-classic .vc_tta-panel {
+		.vc_tta-panel-heading {
+			background-color: $primary-green !important;
+			border-color: $primary-green-darker !important;
+		}
+
+		&.vc_active {
+
+			.vc_tta-panel-title > a {
+				color: #fff !important;
+			}
+
+			.vc_tta-panel-heading {
+				background-color: $primary-green-darker !important;
+				border-color: $primary-green-darker !important;
+			}
+		}
+	}
+}
+
 article {
 	margin-top: 100px;
+}
+
+@media screen and (max-width: 767px) {
+	.wpcm-summary {
+		clear: left;
+	}
 }
 
 .wpcm_vehicle {
@@ -194,6 +372,20 @@ article {
 	margin-bottom: 20px;
 	background: #fff !important;
 	box-shadow: 0 0 2px 0 rgba(46,56,77,.1), 0 4px 16px 0 rgba(0,24,77,.07);
+
+	&.add {
+		padding: 20px;
+	}
+
+	@media screen and (min-width: 501px) and (max-width: 800px) {
+		width: 49%;
+		margin-right: 1%;
+	}
+
+	@media screen and (max-width: 500px) {
+		width: 100%;
+		margin-right: 0;
+	}
 }
 
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item.wpcm-listings-item-featured a {
@@ -202,6 +394,18 @@ article {
 
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item.wpcm-listings-item-featured a:hover {
 	background: #f0f0f0;
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+	.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item:nth-child(2n+1) {
+		clear: left;
+	}
+}
+
+@media screen and (min-width: 801px) {
+	.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item:nth-child(3n+1) {
+		clear: left;
+	}
 }
 
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a {
@@ -236,16 +440,28 @@ article {
 
 	h3 {
 		font-size: 1.1rem;
+
+		@media screen and (max-width: 991px) {
+			font-size: .9rem;
+		}
 	}
 
 	.description {
+		font-size: .9rem;
 
+		@media screen and (max-width: 991px) {
+			font-size: .7rem;
+		}
 	}
 
 	.price {
 		margin-top: .1rem;
 		font-size: 1rem;
 		text-align: right;
+
+		@media screen and (max-width: 991px) {
+			font-size: .8rem;
+		}
 	}
 
 	.year {
@@ -254,21 +470,39 @@ article {
     padding: 2px 3px;
 		background-color: $primary-green;
 		display: inline;
+		font-size: 1rem;
+
+		@media screen and (max-width: 991px) {
+			font-size: .8rem;
+		}
 	}
 
 	.mileage {
 		text-align: right;
+		font-size: 1rem;
+
+		@media screen and (max-width: 991px) {
+			font-size: .8rem;
+		}
 	}
 }
 
 .wpcm_vehicle .wpcm-images .wpcm-pending-review, .wpcm_vehicle .wpcm-images .wpcm-sold,
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper .wpcm-pending-review, .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper .wpcm-sold {
-	background: $primary-green;
+	background: #333;
 	font-weight: 400;
-	top: 1.4em;
-	left: -2em;
-	padding: 0 2em;
-  transform: rotate(-45deg);
+	top: 2.0em;
+	left: -2.0em;
+	padding: 0 1.7em;
+	transform: rotate(-45deg);
+	text-transform: uppercase;
+	font-size: .8em;
+	text-align: center;
+	min-width: 130px;
+
+	&--report {
+		background: $primary-green;
+	}
 }
 
 #similar-cars .wpcm-listings-item-image-wrapper .wp-post-image {
@@ -299,6 +533,21 @@ article {
 	}
 }
 
+//alianzas
+.evc-image-gallery .evc-owl-carousel.owl-drag .owl-item {
+	@media screen and (max-width: 449px) {
+		padding: 0 70px;
+	}
+
+	@media screen and (min-width: 450px) and (max-width: 680px) {
+		padding: 0 150px;
+	}
+
+	@media screen and (min-width: 681px) and (max-width: 767px) {
+		padding: 0 50px;
+	}
+}
+
 
 // testimonies
 .evc-testimonials {
@@ -312,6 +561,12 @@ article {
 			img {
 				width: 100%;
 			}
+
+			@media screen and (max-width: 600px) {
+				width: 40%;
+				margin-left: 30%;
+				margin-right: 10%;
+			}
 		}
 
 		.evc-t-content {
@@ -323,6 +578,18 @@ article {
 			.evc-t-author {
 				text-align: justify;
 			}
+
+			@media screen and (max-width: 600px) {
+				width: 100%;
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+	.owl-nav {
+		@media screen and (max-width: 600px) {
+			display: none;
 		}
 	}
 }
@@ -373,23 +640,6 @@ $modal-height: 500px;
 .sell-form-container {
 	background-color: #fafafa;
 	box-shadow: 0 0 2px 0 rgba(46,56,77,.1), 0 4px 16px 0 rgba(0,24,77,.07);
-
-	.form-group, .wpcf7 .wpcf7-form {
-		p:last-of-type {
-			margin-bottom: 0;
-		}
-	}
-
-	.btn-outline-primary, .wpcf7 input[type=submit] {
-		background-color: $primary-green;
-		color: #fff;
-		border: 0;
-		margin-bottom: 0;
-
-		&:hover {
-			background-color: $primary-green-darker;
-		}
-	}
 }
 
 .contact-form-container {
@@ -406,19 +656,6 @@ $modal-height: 500px;
 			color: #fff !important;
 			font-weight: 500;
 		}
-	}
-
-	.form-group, .wpcf7 .wpcf7-form {
-		p:last-of-type {
-			margin-bottom: 0;
-		}
-	}
-
-	.btn-outline-primary, .wpcf7 input[type=submit] {
-		background-color: $primary-green;
-		color: #fff;
-		border: 0;
-		margin-bottom: 0;
 	}
 }
 
@@ -456,6 +693,48 @@ $modal-height: 500px;
 		font-weight: 500 !important;
 		font-size: 13px !important;
 	}
+
+	.wpb_single_image .vc_single_image-wrapper {
+		padding: 0 30px;
+
+		@media screen and (max-width: 600px) {
+			padding: 0 40px;
+		}
+	}
+}
+
+// Servicios adicionales
+.servicios-adicionales {
+	h2.evc-st-title {
+		text-transform: uppercase;
+		font-weight: 500 !important;
+		font-size: 20px !important;
+		text-align: center;
+	}
+
+	h3.evc-st-title {
+		text-transform: uppercase;
+		font-weight: 500 !important;
+		font-size: 16px !important;
+		text-align: center;
+	}
+
+	.vc_column-inner {
+		box-shadow: 0 0 2px 0 rgba(46,56,77,.1), 0 4px 16px 0 rgba(0,24,77,.07);
+		background: #fff;
+	}
+
+	.wpb_content_element {
+		font-size: 14px;
+	}
+
+	.wpb_single_image .vc_single_image-wrapper {
+		padding: 0 30px;
+
+		@media screen and (max-width: 600px) {
+			padding: 0 40px;
+		}
+	}
 }
 
 // Blog
@@ -468,5 +747,18 @@ $modal-height: 500px;
 
 	&:hover {
 		background-color: $primary-green-darker !important;
+	}
+}
+
+
+.custom-icon {
+	width: auto;
+	height: 4em !important;
+	margin-top: 25px !important;
+	margin-bottom: 30px !important;
+
+	img {
+		height: 5em !important;
+		width: auto !important;
 	}
 }

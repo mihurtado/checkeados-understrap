@@ -1,3 +1,11 @@
+<?php if ($add): ?>
+<li class="wpcm-listings-item add">
+	<a href="<?php echo $add['link']; ?>" title="<?php echo $add['title']; ?>">
+		<img src="<?php echo get_template_directory_uri(); ?>/img/<?php echo $add['image']; ?>" class="img-fluid">
+	</a>
+</li>
+<?php endif; ?>
+
 <li class="wpcm-listings-item<?php echo( $vehicle->is_featured() ? " wpcm-listings-item-featured" : "" ); ?>">
 	<?php
 		$image = get_the_post_thumbnail( $vehicle->get_id(), apply_filters( 'wpcm_single_vehicle_large_thumbnail_size', 'wpcm_vehicle_single' ) );

@@ -37,6 +37,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</div><!-- row end -->
 
+		<div id="footer-powered-by" class="row">
+			<div class="col text-center">Powered by Checkeados group</div>
+		</div>
+
 	</div><!-- container end -->
 
 </div><!-- wrapper end -->
