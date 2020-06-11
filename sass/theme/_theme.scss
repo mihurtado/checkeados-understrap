@@ -193,6 +193,32 @@ nav.navbar {
 	}
 }
 
+.single-wpcm_vehicle {
+	nav.navbar {
+		background-color: #fff !important;
+		opacity: .8;
+
+		a {
+			color: $primary-green !important;
+			font-weight: 600;
+
+			&:hover {
+				color: $primary-green-darker !important;
+			}
+		}
+
+		.navbar-brand img {
+			&.logo-negro {
+				display: inline;
+			}
+
+			&.logo-blanco {
+				display: none;
+			}
+		}
+	}
+}
+
 body.admin-bar nav.navbar {
 	top: 32px;
 }
@@ -768,7 +794,7 @@ $modal-height: 500px;
 .wpcm-vehicle-video-container {
 	font-family: $font-family-roboto;
 	background: #39b54a;
-	background: linear-gradient(90deg, rgba(33,111,44,1) 0%, rgba(57,181,74,1) 35%, rgba(53,214,75,1) 100%);
+	background: linear-gradient(90deg, rgba(33,111,44,1) 0%, rgba(57,181,74,1) 35%, rgba(41,143,56,1) 100%);
 	border-radius: 10px;
 	-webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.5);
 	-moz-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.5);
@@ -779,9 +805,17 @@ $modal-height: 500px;
 	-webkit-box-shadow: 0px 7px 20px 5px rgba(0,0,0,0.64);
 	-moz-box-shadow: 0px 7px 20px 5px rgba(0,0,0,0.64);
 	box-shadow: 0px 7px 20px 5px rgba(0,0,0,0.64);
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
 
 	iframe {
 		margin-bottom: -10px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 }
 
