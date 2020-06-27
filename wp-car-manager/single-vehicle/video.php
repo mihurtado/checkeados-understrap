@@ -16,7 +16,7 @@ if (!empty($video)) {
 
 <div class="wpcm-vehicle-video-container row my-5">
   <div class="col-12 col-md-4 wpcm-vehicle-video-info pt-3 py-md-4 px-2 pl-md-4">
-    <h1 class="title d-block d-md-none">¡Revisa el auto con nuestro video 360!</h1>
+    <h1 class="title d-block d-md-none text-center">¡Revisa el auto con nuestro video 360!</h1>
     <h1 class="title display-2 d-none d-md-block"><i class="fa fa-video-camera"></i> 360°</h1>
     <h1 class="subtitle mt-4 d-none d-md-block">¡Revisa el auto con nuestro video 360!</h1>
     <button id="playVideoBtn" class="mt-5 d-none d-md-block">Ver el video ></button>

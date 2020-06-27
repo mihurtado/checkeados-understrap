@@ -531,6 +531,20 @@ article {
 	}
 }
 
+.wpcm_vehicle .wpcm-images .wpcm-pending-review, .wpcm_vehicle .wpcm-images .wpcm-sold {
+	padding: 0 2.2em;
+	left: -2.2em;
+	top: 2.2em;
+	font-size: 1.1em;
+
+	@media (min-width: 893px) {
+		padding: 0 2.5em;
+		left: -2.5em;
+		top: 2.5em;
+		font-size: 1.4em;
+	}
+}
+
 #similar-cars .wpcm-listings-item-image-wrapper .wp-post-image {
 	display: inline !important;
 }
@@ -793,7 +807,7 @@ $modal-height: 500px;
 // Car video
 .wpcm-vehicle-video-container {
 	font-family: $font-family-roboto;
-	background: #39b54a;
+	background: $primary-green;
 	background: linear-gradient(90deg, rgba(33,111,44,1) 0%, rgba(57,181,74,1) 35%, rgba(41,143,56,1) 100%);
 	border-radius: 10px;
 	-webkit-box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.5);
@@ -838,5 +852,15 @@ $modal-height: 500px;
 		width: 100%;
 		text-transform: uppercase;
 		letter-spacing: 4px;
+		border-width: .9px;
 	}
+}
+
+// Prettyphoto, always show arrows
+.single-wpcm_vehicle a.pp_next {
+	background: url(../../../plugins/wp-car-manager/assets/images/prettyPhoto/default/sprite_next.png) center right no-repeat;
+}
+
+.single-wpcm_vehicle a.pp_previous {
+	background: url(../../../plugins/wp-car-manager/assets/images/prettyPhoto/default/sprite_prev.png) center left no-repeat
 }
