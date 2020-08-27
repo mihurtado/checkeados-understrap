@@ -515,7 +515,8 @@ article {
 
 .wpcm_vehicle .wpcm-images .wpcm-pending-review, .wpcm_vehicle .wpcm-images .wpcm-sold,
 .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper .wpcm-pending-review, .wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper .wpcm-sold {
-	background: #333;
+	background: #FFCC33;
+	color: #000;
 	font-weight: 400;
 	top: 2.0em;
 	left: -2.0em;
@@ -528,6 +529,7 @@ article {
 
 	&--report {
 		background: $primary-green;
+		color: #fff;
 	}
 }
 
@@ -539,9 +541,14 @@ article {
 
 	@media (min-width: 893px) {
 		padding: 0 2.5em;
-		left: -2.5em;
-		top: 2.5em;
+		left: -2em;
+		top: 2em;
 		font-size: 1.4em;
+
+		&--report {
+			left: -2.5em;
+			top: 2.5em;
+		}
 	}
 }
 
