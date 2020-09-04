@@ -503,6 +503,19 @@ article {
 		}
 	}
 
+	.location {
+		color: #000;
+    border-radius: 3px;
+    padding: 2px 3px;
+		background-color: #fc3;
+		display: inline;
+		font-size: 1rem;
+
+		@media screen and (max-width: 991px) {
+			font-size: .8rem;
+		}
+	}
+
 	.mileage {
 		text-align: right;
 		font-size: 1rem;
@@ -870,4 +883,181 @@ $modal-height: 500px;
 
 .single-wpcm_vehicle a.pp_previous {
 	background: url(../../../plugins/wp-car-manager/assets/images/prettyPhoto/default/sprite_prev.png) center left no-repeat
+}
+
+// Buscador
+.searchbox {
+	margin-bottom: 20px;
+
+	@media screen and (max-width: 500px) {
+		font-size: 14px;
+	}
+
+  &__top-buttons {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 5px;
+
+    &__button {
+			cursor: pointer;
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			max-width: 300px;
+			padding: 5px;
+			margin: 0 5px;
+			background-color: #fff;
+			border: 1px solid #39b54a;
+			color: #39b54a;
+			border-radius: 3px;
+
+			&--highlighted {
+				font-weight: bold;
+			}
+
+			&--selected,
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: #39b54a;
+				color: #fff;
+			}
+    }
+  }
+
+  &__content {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px -4px rgba(0,0,0,0.52);
+		padding: 5px;
+		margin: 5px;
+
+    &__search-type {
+      display: flex;
+      border-bottom: 1px solid #999;
+
+      &__button {
+				cursor: pointer;
+        flex: 1;
+        text-align: center;
+				padding: 5px;
+				background-color: transparent;
+				color: #ccc;
+				border: 0;
+
+        &:first-child {
+          border-right: 1px solid #ccc;
+				}
+				
+				&--selected,
+				&:hover,
+				&:active,
+				&:focus {
+					color: #000;
+					border-bottom: 1px solid #39b54a;
+				}
+      }
+    }
+
+    &__search-content {
+      &__field {
+				width: 100% !important;
+				padding: 8px 10px !important;
+				position: relative !important;
+				float: none !important;
+				overflow: visible !important;
+
+				&:last-child {
+					border-bottom: 0px !important;
+				}
+
+				> i {
+					position: absolute;
+					top: 13px;
+					left: 5px;
+					width: 20px;
+    			text-align: center;
+				}
+
+				.select2.select2-container.select2-container--default {
+					width: 100% !important;
+				}
+				
+				.select2-selection.select2-selection--single {
+					width: 100%;
+					background-color: transparent;
+					border: 0;
+				}
+
+				&--text-input {
+					padding-left: 25px !important;
+					border-bottom: 1px solid #ccc !important;
+				}
+
+				&--body-style {
+					display: flex;
+					flex-wrap: wrap;
+
+					&__each {
+						cursor: pointer;
+						opacity: .65;
+						padding: 5px;
+						width: 25%;
+
+						@media screen and (max-width: 500px) {
+							width: 50%;
+						}
+
+						&--selected {
+							opacity: 1;
+
+							.searchbox__content__search-content__field--body-style__each__content {
+								border: 2px solid #39b54a;
+							}
+						}
+
+						&:hover,
+						&:focus,
+						&:active {
+							opacity: 1;
+						}
+
+						&__content {
+							padding: 5px;
+							border: 1px solid #ccc;
+							border-radius: 5px;
+
+							img {
+								width: 100%;
+							}
+
+							span {
+								display: block;
+								width: 100%;
+								text-align: center;
+							}
+						}
+					}
+				}
+      }
+    }
+  }
+
+  &__search-button {
+		margin-top: 5px;
+		padding: 0 5px;
+		padding-top: 0px !important;
+		float: none !important;
+		width: 100%;
+
+		input {
+			cursor: pointer;
+			background-color: #39b54a;
+			border: 0 !important;
+			color: #fff;
+			padding: 10px 0;
+			width: 100%;
+		}
+  }
 }

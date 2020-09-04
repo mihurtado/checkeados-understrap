@@ -76,3 +76,9 @@ function custom_shortcode_atts_wpcf7_filter( $out, $pairs, $atts ) {
 
 	return $out;
 }
+
+remove_action( 'wpcm_listings_vehicle_filters', 'wpcm_template_vehicle_listings_filters_model', 10 );
+remove_action( 'wpcm_listings_vehicle_filters', 'wpcm_template_vehicle_listings_filters_price', 15 );
+remove_action( 'wpcm_listings_vehicle_filters', 'wpcm_template_vehicle_listings_filters_frdate', 15 );
+remove_action( 'wpcm_listings_vehicle_filters', 'wpcm_template_vehicle_listings_filters_mileage', 15 );
+remove_action( 'wpcm_listings_vehicle_filters', 'wpcm_template_vehicle_listings_filters_button', 15 );

@@ -36,6 +36,7 @@
 				<?php do_action( 'wpcm_vehicle_listings_item_meta_start', $vehicle ); ?>
 				<div class="col-6">
 					<p class="year"><?php echo explode("-", $vehicle->get_formatted_frdate())[1]; ?></p>
+					<p class="location"><?php echo $vehicle->get_formatted_region(); ?></p>
 				</div>
 				<div class="col-6">
 					<p class="mileage"><?php echo $mileage; ?></p>
