@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						<?php understrap_site_info(); ?>
+						<!-- <?php understrap_site_info(); ?> -->
 
 					</div><!-- .site-info -->
 
@@ -36,6 +36,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div><!--col end -->
 
 		</div><!-- row end -->
+
+		<div class="row">
+			<div class="col text-center">Powered by Checkeados group</div>
+	</div>
 
 	</div><!-- container end -->
 

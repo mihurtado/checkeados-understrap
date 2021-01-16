@@ -3,4 +3,13 @@
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
 
-$primary: #5533ff; // Thats a sample how you could change a BootStrap variable.
+$primary: #2467a1;
+$grid-gutter-width: 0 !important;
+$body-color: #404040;
+$primary-green: #39b54a;
+$primary-green-darker: #158925;
+
+// $font-size-base: .8rem;
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&display=swap');
+$font-family-sans-serif: 'Raleway', sans-serif;

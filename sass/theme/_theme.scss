@@ -1,1 +1,445 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+.container.container-inside {
+	margin: 0 auto;
+}
+
+.vc_btn3.vc_btn3-color-green.vc_btn3-style-modern {
+	background-color: $primary-green !important;
+
+	&:hover {
+		background-color: $primary-green-darker !important;
+	}
+}
+
+nav.navbar {
+	background-color: #fff !important;
+	-webkit-transition: background-color 500ms linear;
+	-ms-transition: background-color 500ms linear;
+	transition: background-color 500ms linear;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+
+  a {
+		color: $primary-green !important;
+		font-weight: 600;
+
+		&:hover {
+			color: $primary-green-darker !important;
+		}
+	}
+
+	.navbar-brand img {
+		margin-top: 7px;
+		margin-left: 15px;
+		max-height: 60px;
+		width: auto;
+
+		&.logo-negro {
+			display: inline;
+		}
+
+		&.logo-blanco {
+			display: none;
+		}
+	}
+}
+
+body.home nav.navbar {
+	background-color: transparent !important;
+
+	a {
+    color: #fff !important;
+
+    &:hover {
+      color: #ddd !important;
+		}
+	}
+
+	a.dropdown-item {
+		color: $primary-green !important;
+	}
+
+	.navbar-brand img {
+		&.logo-blanco {
+			display: inline;
+		}
+
+		&.logo-negro {
+			display: none;
+		}
+	}
+
+	&--scrolled {
+		background-color: #fff !important;
+		opacity: .8;
+
+		a {
+			color: $primary-green !important;
+			font-weight: 600;
+
+			&:hover {
+				color: $primary-green-darker !important;
+			}
+		}
+
+		.navbar-brand img {
+			&.logo-negro {
+				display: inline;
+			}
+
+			&.logo-blanco {
+				display: none;
+			}
+		}
+	}
+}
+
+body.admin-bar nav.navbar {
+	top: 32px;
+}
+
+div.full-title-with-background {
+	margin-top: 100px;
+	background-size: cover;
+	background-position: center;
+	padding-top: 50px;
+	padding-bottom: 80px;
+
+	.evc-section-title {
+		margin-bottom: 0;
+	}
+
+	.evc-st-title {
+		color: #fff !important;
+		font-weight: 500 !important;
+		text-transform: uppercase;
+		text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+	}
+}
+
+#wrapper-footer-full {
+	background-color: #191919;
+	padding: 30px 0;
+	color: #aaaaaa;
+
+	a {
+		color: #aaaaaa !important;
+	}
+
+	h3 {
+		color: #fff;
+		font-size: 1.3rem;
+		text-transform: uppercase;
+	}
+
+	.footer-widget {
+		padding: 20px 0;
+	}
+}
+
+.no-margin-bottom {
+	margin-bottom: 0 !important;
+}
+
+.evc-section-title {
+	margin-bottom: 20px;
+}
+
+.info-tabs {
+	text-align: center;
+
+	h4 {
+		text-transform: uppercase;
+		margin: 30px 0 !important;
+		font-weight: 500;
+		font-size: 1.4rem;
+	}
+
+	.vc_icon_element-inner {
+		margin-top: 25px;
+		margin-bottom: 30px;
+	}
+}
+
+article {
+	margin-top: 100px;
+}
+
+.wpcm_vehicle {
+	.entry-header {
+		display: none;
+	}
+}
+
+.wpcm-vehicle-listings .wpcm-vehicle-filters .wpcm-filter-button input,
+.wpcm-button:active, .wpcm-button:focus, .wpcm-button:visited,
+.wpcm-button {
+	background-color: $primary-green;
+	color: #fff;
+
+	&:hover {
+		background-color: $primary-green-darker;
+		text-decoration: none;
+	}
+}
+
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item {
+	width: 32%;
+	float: left;
+	margin-right: 1.3%;
+	margin-bottom: 20px;
+	background: #fff !important;
+	box-shadow: 0 0 2px 0 rgba(46,56,77,.1), 0 4px 16px 0 rgba(0,24,77,.07);
+}
+
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item.wpcm-listings-item-featured a {
+	background: transparent;
+}
+
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item.wpcm-listings-item-featured a:hover {
+	background: #f0f0f0;
+}
+
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a {
+	padding: 0;
+}
+
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper {
+	width: 100% !important;
+	height: auto !important;
+	position: relative;
+	margin-right: 0;
+	float: none;
+	position: static;
+}
+
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-image-wrapper img.wpcm-listings-item-image {
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	box-shadow: none;
+}
+
+.wpcm-vehicle-listings .wpcm-vehicle-results-wrapper .wpcm-vehicle-results li.wpcm-listings-item a .wpcm-listings-item-text {
+	width: 100% !important;
+	position: static;
+	padding: 1em 0.5em;
+	color: $body-color;
+
+	h3, p {
+		margin-bottom: .3rem;
+	}
+
+	h3 {
+		font-size: 1.1rem;
+	}
+
+	.description {
+
+	}
+
+	.price {
+		margin-top: .1rem;
+		font-size: 1rem;
+		text-align: right;
+	}
+
+	.year {
+		color: #fff;
+    border-radius: 3px;
+    padding: 2px 3px;
+		background-color: $primary-green;
+		display: inline;
+	}
+
+	.mileage {
+		text-align: right;
+	}
+}
+
+.wpcm_vehicle .wpcm-images .wpcm-pending-review, .wpcm_vehicle .wpcm-images .wpcm-sold {
+	background: $primary-green;
+	font-weight: 400;
+	top: 1.4em;
+	left: -2em;
+	padding: 0 2em;
+  transform: rotate(-45deg);
+}
+
+// que quieres hacer
+.wpb-js-composer .vc_tta-color-blue.vc_tta-style-classic {
+	.vc_tta-tab {
+		a {
+			background-color: #fff !important;
+			color: $primary-green !important;
+			border: 1px solid $primary-green !important;
+
+			&:hover {
+				background-color: $primary-green !important;
+				color: #fff !important;
+			}
+		}
+
+		&.vc_active {
+			a {
+				background-color: $primary-green !important;
+				color: #fff !important;
+				border: 1px solid $primary-green !important;
+			}
+		}
+	}
+}
+
+
+// testimonies
+.evc-testimonials {
+	.evc-t-item {
+		.evc-t-image {
+			margin-left: 10%;
+			padding-top: 35px;
+			float: left;
+			width: 12%;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.evc-t-content {
+			padding-left: 65px;
+			float: left;
+			width: 50%;
+
+			.evc-t-text,
+			.evc-t-author {
+				text-align: justify;
+			}
+		}
+	}
+}
+
+// Modals
+$modal-height: 500px;
+
+.modal-wrapper {
+	background: rgba(0, 0, 0, .6);
+
+	.modal {
+		margin: auto;
+		margin-top: 15%;
+		width: 70%;
+		height: $modal-height;
+		background-color: #fff;
+		position: relative;
+		overflow: visible;
+	}
+
+	.close-modal {
+		float: right;
+		font-size: 30px;
+		margin-right: -30px;
+		margin-top: 0;
+		background: transparent;
+    color: #fff;
+		line-height: 15px;
+		border: 0 !important;
+	}
+
+	#modal-content {
+		padding: 0;
+		height: $modal-height;
+		position: absolute;
+		width: 100%;
+
+		iframe {
+			height: $modal-height;
+			width: 100%;
+			overflow: hidden;
+			border: 0;
+		}
+	}
+}
+
+
+.sell-form-container {
+	background-color: #fafafa;
+	box-shadow: 0 0 2px 0 rgba(46,56,77,.1), 0 4px 16px 0 rgba(0,24,77,.07);
+
+	.form-group, .wpcf7 .wpcf7-form {
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	.btn-outline-primary, .wpcf7 input[type=submit] {
+		background-color: $primary-green;
+		color: #fff;
+		border: 0;
+		margin-bottom: 0;
+
+		&:hover {
+			background-color: $primary-green-darker;
+		}
+	}
+}
+
+.contact-form-container {
+	border: none;
+	background: #fff;
+	box-shadow: 0 0 2px 0 rgba(46,56,77,.1), 0 4px 16px 0 rgba(0,24,77,.07);
+	border-radius: 0;
+
+	.title {
+		background-color: $primary-green;
+		padding: 10px 0;
+
+		h4 {
+			color: #fff !important;
+			font-weight: 500;
+		}
+	}
+
+	.form-group, .wpcf7 .wpcf7-form {
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	.btn-outline-primary, .wpcf7 input[type=submit] {
+		background-color: $primary-green;
+		color: #fff;
+		border: 0;
+		margin-bottom: 0;
+	}
+}
+
+.box {
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+
+	.vc_column-inner {
+		-webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+		border: 2px solid $primary-green;
+
+		* {
+			color: $primary-green !important;
+		}
+	}
+
+	&:hover {
+		.vc_column-inner {
+			border: 2px solid #fff;
+			background-color: $primary-green;
+
+			* {
+				color: #fff !important;
+			}
+		}
+	}
+}

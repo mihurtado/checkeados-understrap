@@ -1,6 +1,6 @@
 {
-	"name": "holger1411/understrap",
-	"description": "Combines Automattic´s Underscores Starter Theme and Bootstrap 4",
+	"name": "holger1411/checkados-understrap",
+	"description": "Template para checkeados.cl basado en understrap",
 	"type": "wordpress-theme",
 	"license": "GPL-2.0",
 	"minimum-stability": "stable",
@@ -9,7 +9,7 @@
 		"theme",
 		"bootstrap"
 	],
-	"homepage": "https://github.com/holger1411/understrap",
+	"homepage": "https://github.com/mihurtado/checkeados-understrap",
 	"require": {
 		"composer/installers": "^1.5"
 	},
